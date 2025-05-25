@@ -7,26 +7,30 @@
 
 "use strict"
 
-//setting the divdeNumberBtn functoin
-function divdeNumberBtn() {
 
-  // Setting the variables 
-  const firstNum = parseInt(document.getElementById("first-num").value)
-  const secondNum = parseInt(document.getElementById("second-num").value)
-  let result = 0
-  let remainder = firstNum
+//setting the calculateInterest functoin
+function calclateIntrest() {
+  const money = parseFloat(document.getElementById("initial-money").value)
+  const interestRate = parseFloat(document.getElementById("interest-rate").value)
+  const numberOfYears = parseInt(document.getElementById("number-of-years").value)
+  let totalAmount = money
+  let breakdown = ""
 
-  // While loop to do repeated subtraction 
-  while (true) {
-    if (remainder >= secondNum) {
-      remainder = remainder - secondNum
-      result++
-    } else {
-      break
-    }
+  // Setting the loop 
+  for (let year = 1; year <= numberOfYears; year++) {
+    const previousAmount = totalAmount
+    totalAmount = totalAmount * (1 + interestRate / 100)
+
+    breakdown += "Year " + year + ": $" + previousAmount.toFixed(2) +
+    " × " + (1 + interestRate / 100).toFixed(2) +
+    " = $" + totalAmount.toFixed(2) + "<br>"
   }
-
-  // Display result
+  // shwowing the result 
   document.getElementById("result").innerHTML =
-    "Result: " + result + "<br>Remainder: " + remainder
+  "<br>" +
+  "Initial Money: $" + money.toFixed(2) +
+  "<br>Interest Rate: " + interestRate.toFixed(2) + "%" +
+  "<br>Years: " + numberOfYears + "<br><br>" +
+  breakdown +
+  "<br><b>Final Amount: $" + totalAmount.toFixed(2) + "</b>"
 }
