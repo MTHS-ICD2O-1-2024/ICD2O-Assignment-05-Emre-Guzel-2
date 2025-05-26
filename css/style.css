@@ -14,14 +14,17 @@ body {
   font-style: normal;
   background: skyblue;
 }
-.container{
+
+.container {
   margin-left: 10em;
   display: flex;
 }
-.formula-tittle{
+
+.formula-tittle {
   font-size: 2.3rem;
 }
-.formula{
+
+.formula {
   font-size: 1.5rem;
 }
 
@@ -33,7 +36,8 @@ body {
   margin-bottom: 0;
 
 }
-p{
+
+p {
   font-size: 1rem;
   font-weight: 900;
   margin: 0;
@@ -70,11 +74,13 @@ p{
 
 #base-a {
   align-items: center;
-  
+
 }
-.celsius{
+
+.celsius {
   font-size: 1.2rem;
 }
-.Fahrenheit{
+
+.Fahrenheit {
   font-size: 1.3rem;
 }
