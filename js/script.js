@@ -2,11 +2,10 @@
 // Copyright (c) 2020 Mr. Coxall All rights reserved
 //
 // Created by: Emre Guzel
-// Created on: May 8 2025
+// Created on: May 25 2025
 // This file contains the JS functions for index.html
 
 "use strict"
-
 
 //setting the calculateInterest functoin
 function calclateIntrest() {
@@ -21,6 +20,7 @@ function calclateIntrest() {
     const previousAmount = totalAmount
     totalAmount = totalAmount * (1 + interestRate / 100)
 
+    // setting the breakdwon in a list 
     breakdown += "Year " + year + ": $" + previousAmount.toFixed(2) +
     " × " + (1 + interestRate / 100).toFixed(2) +
     " = $" + totalAmount.toFixed(2) + "<br>"
